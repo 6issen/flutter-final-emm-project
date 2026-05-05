@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "493696613453",
+    "project_id": "mastermindauth",
+    "storage_bucket": "mastermindauth.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:493696613453:android:b835598495b5439866b004",
+        "android_client_info": {
+          "package_name": "com.example.emm_final_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLaeFZ_STkKIpI5L-hjmqJXqTGgci_vdY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

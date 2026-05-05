@@ -10,10 +10,12 @@ import 'package:emm_final_project/presentation/blocs/auth/auth_event.dart';
 import 'package:emm_final_project/presentation/blocs/theme/theme_bloc.dart';
 import 'package:emm_final_project/presentation/blocs/theme/theme_event.dart';
 import 'package:emm_final_project/presentation/blocs/theme/theme_state.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await di.init();
 
   runApp(const RouteApp());

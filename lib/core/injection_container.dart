@@ -11,6 +11,7 @@ import 'package:emm_final_project/presentation/blocs/auth/auth_bloc.dart';
 import 'package:emm_final_project/presentation/blocs/route/route_bloc.dart';
 import 'package:emm_final_project/presentation/blocs/station/station_bloc.dart';
 import 'package:emm_final_project/presentation/blocs/theme/theme_bloc.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -26,7 +27,7 @@ Future<void> init() async {
   // Репозитории
   sl.registerLazySingleton<IRouteRepository>(() => RouteRepositoryImpl(sl()));
   // Регистрируем репозиторий авторизации
-  sl.registerLazySingleton<IAuthRepository>(() => AuthRepositoryImpl(sl()));
+  sl.registerLazySingleton<IAuthRepository>(() => AuthRepositoryImpl(FirebaseAuth.instance));
 
   // Use Cases
   sl.registerLazySingleton(() => GetAllRoutesUseCase(sl()));
