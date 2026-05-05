@@ -1,17 +1,35 @@
-# emm_final_project
+# Mastermind — Рабочее место машиниста локомотива 🚂
 
-A new Flutter project.
+Финальный проект для DataGroup Academy. Мобильное приложение для учета рабочего времени, маршрутов и расхода электроэнергии/топлива локомотивных бригад.
 
-## Getting Started
+## 📱 Скриншоты
+<p align="center">
+  <img src="screenshots/home.png" width="250">
+  <img src="screenshots/route_details.png" width="250">
+  <img src="screenshots/stats.png" width="250">
+  <img src="screenshots/stations.png" width="250">
+  <img src="screenshots/profile.png" width="250">
+</p>
 
-This project is a starting point for a Flutter application.
+## 🚀 Реализованный функционал (MVP + Бонусы)
+- **Авторизация**: Вход по табельному номеру и паролю, сохранение сессии.
+- **Офлайн-режим (Drift/SQLite)**: Приложение полностью автономно, данные не теряются без интернета.
+- **CRUD операции**: Создание маршрутов, добавление станций, просмотр деталей, завершение (редактирование) и удаление свайпом.
+- **Фильтрация**: Сортировка списков маршрутов по вкладкам (Все / В пути / Завершенные).
+- **Аналитика**: Графики расхода и средних показателей (fl_chart).
+- **Тёмная тема (+0.5 балла)**: Переключатель в профиле с сохранением состояния.
 
-A few resources to get you started if this is your first Flutter project:
+## 🛠 Технический стек и Архитектура
+Проект построен по принципам **Strict Clean Architecture**:
+- **UI / Навигация**: Flutter (Material 3), `go_router`.
+- **State Management**: BLoC (Business Logic Component).
+- **Архитектура**: Разделение на слои `presentation`, `domain` (Use Cases) и `data` (Repositories). Логика полностью отделена от UI.
+- **Локальная БД**: `drift` (SQLite).
+- **Графики**: `fl_chart`.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## ⚙️ Инструкция по запуску
+1. Склонируйте репозиторий: `git clone https://github.com/ВАШ_ЛОГИН/mastermind.git`
+2. Перейдите в папку проекта: `cd mastermind`
+3. Установите зависимости: `flutter pub get`
+4. Сгенерируйте файлы (если требуется для BLoC/Drift): `flutter pub run build_runner build --delete-conflicting-outputs`
+5. Запустите проект: `flutter run`
